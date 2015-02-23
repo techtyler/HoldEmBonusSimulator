@@ -19,8 +19,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'holdembonus_dev',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '********',          #Learn how to ignore this line?
+        'USER': 'holdem_dev',                      # Not used with sqlite3.
+        'PASSWORD': 'bonus',          #Learn how to ignore this line?
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
