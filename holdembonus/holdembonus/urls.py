@@ -2,23 +2,22 @@ from django.conf.urls import patterns, include, url
 from django.contrib.auth.models import User
 from django.contrib import admin
 from rest_framework import routers
-#from players.views import PlayerAccountViewSet
+from players.views import PlayerAccountViewSet
 #from views import IndexView
 
 
 
 # Routers provide an easy way of automatically determining the URL conf.
-#router = routers.SimpleRouter()
-#router.register(r'players', PlayerAccountViewSet)
+router = routers.SimpleRouter()
+router.register(r'players', PlayerAccountViewSet)
 
 
 urlpatterns = patterns('',
-	url(r'^foundation/', include('foundation.urls')),
     url(r'^$', 'holdembonus.views.index', name='index'),
 
     #url(r'^views/index.html/$', 'holdembonus.views.index'),
-    url(r'^views/(?P<page>[-\w]+.html)/$', 'myproject.views.angular_views'),
-    url(r'^(?P<path>.*)/$', 'holdembonus.views.angular_redirector'),
+    #url(r'^views/(?P<page>[-\w]+.html)/$', 'holdembonus.views.angular_views'),
+    #url(r'^(?P<path>.*)/$', 'holdembonus.views.angular_redirector'),
 )
 
 
