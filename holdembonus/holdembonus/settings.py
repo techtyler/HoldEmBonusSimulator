@@ -132,8 +132,12 @@ INSTALLED_APPS = (
     'cards',
     'foundation',
     'rest_framework',
-    'players',
+    'rest_framework.authtoken',
     'compressor',
+    'rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration'
     
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
@@ -170,9 +174,8 @@ LOGGING = {
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     )
 }
 
-
-AUTH_USER_MODEL = 'players.PlayerAccount'

@@ -4,7 +4,7 @@
         .module('holdembonus', [
             'holdembonus.config',
             'holdembonus.routes',
-            'holdembonus.players'
+            'auth'
         ]);
     
     angular
