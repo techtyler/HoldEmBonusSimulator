@@ -2,7 +2,9 @@
 {% load staticfiles %}
 
 {% compress js %}
-<script type="text/javascript" src="{% static 'bower_components/jquery/src/jquery.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
 <!-- <script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
 <script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/material.js' %}"></script>
 <script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/ripples.js' %}"></script> -->
@@ -11,10 +13,31 @@
 <script type="text/javascript" src="{% static 'bower_components/underscore/underscore.js' %}"></script>
 <script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
 <script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-resource/angular-resource.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-sanitize/angular-sanitize.js' %}"></script>
 <script type="text/javascript" src="{% static 'bower_components/angular-cookies/angular-cookies.js' %}"></script>
 
 <script type="text/javascript" src="{% static 'bower_components/ngDialog/js/ngDialog.js' %}"></script>
 <!-- <script type="text/javascript" src="{% static 'lib/snackbarjs/snackbar.min.js' %}"></script> -->
 
+
+<script type="text/javascript" src="{% static 'javascripts/holdembonus.config.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/holdembonus.routes.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/rest-ang-auth.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/authrequired.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/login.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/logout.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/master.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/passwordchange.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/passwordreset.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/passwordresetconfirm.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/register.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/restricted.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/userprofile.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/controllers/verifyemail.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/services/djangoAuth.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/rest-ang-auth/services/validate.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascripts/holdembonus.js' %}"></script>
 {% endcompress %}

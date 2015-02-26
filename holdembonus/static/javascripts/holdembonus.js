@@ -4,13 +4,8 @@
         .module('holdembonus', [
             'holdembonus.config',
             'holdembonus.routes',
-            'auth'
+            'rest-ang-auth',
         ]);
     
-    angular
-        .module('holdembonus.routes', ['ngRoute']);
-    
-    angular
-        .module('holdembonus.config, []');
     
 })();

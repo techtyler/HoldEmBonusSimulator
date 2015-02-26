@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('holdembonus.config')
+    .module('holdembonus.config', [])
     .config(config);
 
   config.$inject = ['$locationProvider'];

@@ -6,3 +6,9 @@ from django.http import HttpResponse
 
 def index(request):
 	return render(request, 'index.html')
+
+ 
+
+def auth_view(request): #do i want this to also include a parameter or lookup page from request?
+	path = request.path
+	return render(request, 'auth/' + path.split('/')[-1])
