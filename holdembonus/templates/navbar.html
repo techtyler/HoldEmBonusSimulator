@@ -11,9 +11,8 @@
     <!-- Right Nav Section -->
     <ul class="right">
       {% if user.is_authenticated %}
-          <li><a href="/+{{ user.username }}">+{{ user.username }}</a></li>
-          <li><a href="/+{{ user.username }}/settings">Settings</a></li>
-          <li><a href="javascript:void(0)">Logout</a></li>
+          <li><a href="auth/userProfile">{{ user.username }}</a></li>
+          <li><a href="/logout">Logout</a></li>
         {% else %}
           <li><a href="/login">Login</a></li>
           <li><a href="/register">Register</a></li>

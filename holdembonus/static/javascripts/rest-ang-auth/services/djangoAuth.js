@@ -200,7 +200,7 @@ angular.module('rest-ang-auth')
         'initialize': function(url, sessions){
             this.API_URL = url;
             this.use_session = sessions;
-            return this.authenticationStatus();
+            // return this.authenticationStatus();
         }
 
     }

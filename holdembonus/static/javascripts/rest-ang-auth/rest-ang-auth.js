@@ -8,15 +8,15 @@ angular.module('rest-ang-auth', [
 ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'auth/main.html',
-        controller: 'MainCtrl',
-        resolve: {
-          authenticated: ['djangoAuth', function(djangoAuth){
-            return djangoAuth.authenticationStatus();
-          }],
-        }
-      })
+      // .when('/', {
+      //   templateUrl: 'auth/main.html',
+      //   controller: 'MainCtrl',
+      //   resolve: {
+      //     authenticated: ['djangoAuth', function(djangoAuth){
+      //       return djangoAuth.authenticationStatus();
+      //     }],
+      //   }
+      // })
       .when('/register', {
         templateUrl: 'auth/register.html',
         resolve: {
@@ -25,22 +25,22 @@ angular.module('rest-ang-auth', [
           }],
         }
       })
-      .when('/passwordReset', {
-        templateUrl: 'auth/passwordreset.html',
-        resolve: {
-          authenticated: ['djangoAuth', function(djangoAuth){
-            return djangoAuth.authenticationStatus();
-          }],
-        }
-      })
-      .when('/passwordResetConfirm/:firstToken/:passwordResetToken', {
-        templateUrl: 'auth/passwordresetconfirm.html',
-        resolve: {
-          authenticated: ['djangoAuth', function(djangoAuth){
-            return djangoAuth.authenticationStatus();
-          }],
-        }
-      })
+      // .when('/passwordReset', {
+      //   templateUrl: 'auth/passwordreset.html',
+      //   resolve: {
+      //     authenticated: ['djangoAuth', function(djangoAuth){
+      //       return djangoAuth.authenticationStatus();
+      //     }],
+      //   }
+      // })
+      // .when('/passwordResetConfirm/:firstToken/:passwordResetToken', {
+      //   templateUrl: 'auth/passwordresetconfirm.html',
+      //   resolve: {
+      //     authenticated: ['djangoAuth', function(djangoAuth){
+      //       return djangoAuth.authenticationStatus();
+      //     }],
+      //   }
+      // })
       .when('/login', {
         templateUrl: 'auth/login.html',
         resolve: {
@@ -49,14 +49,14 @@ angular.module('rest-ang-auth', [
           }],
         }
       })
-      .when('/verifyEmail/:emailVerificationToken', {
-        templateUrl: 'auth/verifyemail.html',
-        resolve: {
-          authenticated: ['djangoAuth', function(djangoAuth){
-            return djangoAuth.authenticationStatus();
-          }],
-        }
-      })
+      // .when('/verifyEmail/:emailVerificationToken', {
+      //   templateUrl: 'auth/verifyemail.html',
+      //   resolve: {
+      //     authenticated: ['djangoAuth', function(djangoAuth){
+      //       return djangoAuth.authenticationStatus();
+      //     }],
+      //   }
+      // })
       .when('/logout', {
         templateUrl: 'auth/logout.html',
         resolve: {
@@ -103,6 +103,7 @@ angular.module('rest-ang-auth', [
         redirectTo: '/'
       });
   })
+// IF YOU UNCOMMENT THIS, MOVE SEMICOLON ABOVE THIS LINE
   .run(function(djangoAuth){
      djangoAuth.initialize('//127.0.0.1:3000/rest-auth', false); // DOES THIS NEED TO CHANGE FOR PROD?
   });
