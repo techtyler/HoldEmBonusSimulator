@@ -45,7 +45,7 @@ angular.module('rest-ang-auth', [
         templateUrl: 'auth/login.html',
         resolve: {
           authenticated: ['djangoAuth', function(djangoAuth){
-            return djangoAuth.authenticationStatus();
+             return djangoAuth.authenticationStatus();
           }],
         }
       })

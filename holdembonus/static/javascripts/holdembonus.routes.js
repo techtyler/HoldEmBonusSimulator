@@ -3,7 +3,7 @@
 
   angular
     .module('holdembonus.routes', ['ngRoute'])
-    //.config(config);
+    .config(config);
 
   config.$inject = ['$routeProvider'];
 
@@ -14,10 +14,14 @@
   * @desc Define valid application routes
   */
   function config($routeProvider) {
-    $routeProvider.when('/register', {
-      controller: 'rest-ang-auth.RegisterCtrl', 
-      controllerAs: 'vm',
-      templateUrl: 'auth/register.html'
-    }).otherwise('/');
+    $routeProvider.when('/home', {
+      templateUrl: 'home.html'
+    })
+    
+    .when('/', {
+      redirectTo: '/home'
+    })
+
+    .otherwise('/');
    }
 })();

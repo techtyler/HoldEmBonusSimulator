@@ -14,7 +14,9 @@ urlpatterns = patterns(
 	url(r'^auth/', 'holdembonus.views.auth_view'),
 	url(r'^rest-auth/', include('rest_auth.urls')),
 	url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+	url(r'^home', 'holdembonus.views.home', name='home'),
 	url(r'^$', 'holdembonus.views.index', name='index'),
+
 	
 	
 

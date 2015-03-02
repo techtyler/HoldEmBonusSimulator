@@ -159,6 +159,7 @@ angular.module('rest-ang-auth')
                 }
             });
         },
+        // THIS FUNCTION ALWAYS TALKS TO SERVER AND ASKS FOR A URL, IF A 401 IS RETURNED DON'T LET IT PROMPT
         'authenticationStatus': function(restrict, force){
             // Set restrict to true to reject the promise if not logged in
             // Set to false or omit to resolve when status is known
